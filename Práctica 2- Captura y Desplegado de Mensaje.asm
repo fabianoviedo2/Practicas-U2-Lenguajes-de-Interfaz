@@ -1,11 +1,9 @@
-
 ; Materia: Lenguajes de Interfaz
 ; Alumno: Fabian Alexis Camacho Oviedo
 ; Horario: 8-9
-; Docente: José Luis Medina Jiménez
+; Docente: Dr José Luis Medina Jiménez
 ; Práctica: Captura y despliegue de mensajes
-; Descripción: Captura el nombre del usuario, lo muestra
-; en pantalla y despliega la cantidad de caracteres.
+; Descripción: Captura el nombre del usuario, lo muestra en pantalla y despliega la cantidad de caracteres.
 
 INCLUDE Irvine32.inc
 
@@ -23,25 +21,25 @@ main PROC
     mov edx, OFFSET mensajeEntrada
     call WriteString
 
-    ; Capturar el nombre
+    ; Captura el nombre
     mov edx, OFFSET nombre
     mov ecx, SIZEOF nombre
     call ReadString
 
-    ; Guardar la cantidad de caracteres
+    ; Guarda la cantidad de caracteres
     mov longitud, eax
     call Crlf
 
-    ; Mostrar el nombre capturado
+    ; Muestra el nombre capturado
     mov edx, OFFSET nombre
     call WriteString
     call Crlf
 
-    ; Mostrar mensaje de longitud
+    ; Muestra el mensaje de longitud
     mov edx, OFFSET mensajeLongitud
     call WriteString
 
-    ; Mostrar cantidad de caracteres
+    ; Muestra la cantidad de caracteres
     mov eax, longitud
     call WriteDec
 
