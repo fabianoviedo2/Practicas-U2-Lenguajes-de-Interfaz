@@ -1,3 +1,10 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 5-Condicionales (2)
+; Descripción: Muestra los numeros del 1 al 10 utilizando un ciclo y saltos condicionales.
+
 INCLUDE Irvine32.inc
 
 .code
