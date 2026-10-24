@@ -1,3 +1,10 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 12-Desplazamiento y Rotación
+; Descripción: instrucciones para desplazar y rotar los bits a la izquierda o derecha.
+
 INCLUDE Irvine32.inc
 
 .code
