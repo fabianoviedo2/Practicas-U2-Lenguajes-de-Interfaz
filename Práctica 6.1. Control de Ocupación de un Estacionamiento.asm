@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 6.1-Control de Ocupación de un Estacionamiento
+; Descripción: entrada y salida de carros en un estacionamiento con capacidad de 20 vehiculos.
 
 INCLUDE Irvine32.inc
 
@@ -18,18 +24,18 @@ carros DWORD 0
 main PROC
 
 ciclo:
-    ; Mostrar ocupacion actual
+    ; Mostrar la ocupacion actual
     mov edx, OFFSET msgOcupacion
     call WriteString
     mov eax, carros
     call WriteDec
     call Crlf
 
-    ; Verificar capacidad maxima
+    ; Verificar la capacidad maxima
     cmp carros, 20
     je lleno
 
-    ; Mostrar menu
+    ; Mostrar el menu
     mov edx, OFFSET msgMenu
     call WriteString
     call Crlf
