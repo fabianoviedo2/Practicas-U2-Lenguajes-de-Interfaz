@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 10-cadena con decimal 
+; Descripción: programa que calcula y muestra el avance de los bytes descargados y los bytes pendientes
 
 INCLUDE Irvine32.inc
 
