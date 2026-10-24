@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 15-Manipulación de Archivo
+; Descripción: se crea un archivo TXT, se escribe un valor y comprueba que se haya guardado exitosamente
 
 INCLUDE Irvine32.inc
 
@@ -16,7 +22,7 @@ main PROC
     mov edx, OFFSET nombreArchivo
     call CreateOutputFile
 
-    cmp eax, INVALID_HANDLE_VALUE
+    cmp eax, INVALID_HANDLE_VALUE ; se Comprueba si se creo correctamente
     je error
 
     mov archivoHandle, eax
@@ -27,7 +33,7 @@ main PROC
     mov ecx, SIZEOF texto - 1
     call WriteToFile
 
-    jc errorEscritura
+    jc errorEscritura ; se verifica si hubo un error escribiendo
 
     cmp eax, SIZEOF texto - 1
     jne errorEscritura
@@ -39,6 +45,7 @@ main PROC
     test eax, eax
     jz error
 
+     ; se muestra el mensaje si se guardo correctamente
     mov edx, OFFSET mensajeExito
     call WriteString
     jmp fin
@@ -48,6 +55,7 @@ errorEscritura:
     call CloseFile
 
 error:
+ ; se cierra el archivo si hubo un error
     mov edx, OFFSET mensajeError
     call WriteString
 
