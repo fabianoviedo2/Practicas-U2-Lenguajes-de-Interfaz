@@ -1,3 +1,10 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 6-Decremento e Incremento
+; Descripción: se ingresa un PIN con un maximo de 3 intentos antes de que se bloquee el acceso.
+
 INCLUDE Irvine32.inc
 
 .data
@@ -14,10 +21,12 @@ main PROC
    mov ebx, 3 ; NUMERO DE INTENTOS PARA INGRESAR
 
   intentar:
+  ; Pedir el PIN
   mov edx, OFFSET msgPIN 
    call WriteString
    call ReadInt
 
+   ; Comprobar si el PIN es correcto
    cmp eax, pinCorrecto
    je acceso
    
@@ -25,11 +34,11 @@ main PROC
    call WriteString
    call crlf
 
-   dec ebx
+   dec ebx ; decrementar un intento
 
    jz bloqueado
 
-   mov edx, OFFSET msgIntentos
+   mov edx, OFFSET msgIntentos  ; Mostrar los intentos restantes
    call WriteString
 
    mov eax, ebx
@@ -40,6 +49,7 @@ main PROC
 
 
 acceso:
+ ; Mostrar el acceso permitido
 mov edx, OFFSET msgAcceso
 call WriteString 
 call crlf
@@ -47,6 +57,7 @@ jmp fin
 
 
 bloqueado:
+; Mostrar el acceso bloqueado
 mov edx, OFFSET msgBloqueado
 call WriteString
 call crlf 
