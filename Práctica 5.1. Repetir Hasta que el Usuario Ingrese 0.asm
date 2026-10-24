@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 5.1-Repetir Hasta que el Usuario Ingrese 0
+; Descripción: se piden numeros y dice si son positivos o negativos, hasta que el usuario ingrese 0 para salir.
 
 INCLUDE Irvine32.inc
 
