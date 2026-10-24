@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 14-Captura y Almacenamiento de Dato Numérico
+; Descripción: se capturan una cantidad de productos, se valida el dato y actualiza el inventario.
 
 INCLUDE Irvine32.inc
 
