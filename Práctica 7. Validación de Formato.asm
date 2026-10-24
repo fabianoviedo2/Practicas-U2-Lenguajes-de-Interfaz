@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 7-Validación de Formato
+; Descripción: Verifica una cadena 
 
 INCLUDE Irvine32.inc
 
@@ -12,7 +18,8 @@ main PROC
     mov ecx, 0
     
 validarLetras:
-    mov al, [esi]
+
+    mov al, [esi] ; Comprobar que sean letras mayusculas
 
     cmp al, "A"
     jb invalido
