@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 4.1-Mayor, Menor o Igual con Entrada del Usuario
+; Descripción: Pide dos numeros y los compara para saber si son mayores, menores o iguales, tambien utilizando los saltos en el proceso
 
 INCLUDE Irvine32.inc
 
@@ -15,24 +21,25 @@ num2 DWORD ?
 .code
 main PROC
 
-    ; Pedir el primer numero
-    mov edx, OFFSET msgNum1
+    ; se pide el primer numero
+    mov edx, OFFSET msgNum1  
     call WriteString
     call ReadInt
     mov num1, eax
 
-    ; Pedir el segundo numero
-    mov edx, OFFSET msgNum2
+     ; se pide el segundo numero
+    mov edx, OFFSET msgNum2  
     call WriteString
     call ReadInt
     mov num2, eax
 
-    ; Comparar los dos numeros
+    ; se Comparan los dos numeros
     mov eax, num1
     mov ebx, num2
 
     cmp eax, ebx
 
+    ;saltos 
     jg mayor
     jl menor
     je iguales
