@@ -17,30 +17,25 @@ longitud DWORD ?
 .code
 main PROC
 
-    ; Mostrar mensaje de entrada
-    mov edx, OFFSET mensajeEntrada
+   
+    mov edx, OFFSET mensajeEntrada ; Mostrar el mensaje de entrada
     call WriteString
 
-    ; Captura el nombre
-    mov edx, OFFSET nombre
+    mov edx, OFFSET nombre  ; Captura el nombre que se ingresara 
     mov ecx, SIZEOF nombre
     call ReadString
 
-    ; Guarda la cantidad de caracteres
-    mov longitud, eax
+    mov longitud, eax  ; Guarda la cantidad de caracteres
     call Crlf
 
-    ; Muestra el nombre capturado
-    mov edx, OFFSET nombre
+    mov edx, OFFSET nombre   ; Muestra el nombre capturado
     call WriteString
     call Crlf
 
-    ; Muestra el mensaje de longitud
-    mov edx, OFFSET mensajeLongitud
+    mov edx, OFFSET mensajeLongitud ; Muestra el mensaje de longitud
     call WriteString
 
-    ; Muestra la cantidad de caracteres
-    mov eax, longitud
+    mov eax, longitud  ; Muestra la cantidad de caracteres puestos
     call WriteDec
 
     exit
