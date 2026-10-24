@@ -1,3 +1,9 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 11-Operaciones Lógicas
+; Descripción: operaciones logicas para modificar y estar comprobando los estados binarios.
 
 INCLUDE Irvine32.inc
 
