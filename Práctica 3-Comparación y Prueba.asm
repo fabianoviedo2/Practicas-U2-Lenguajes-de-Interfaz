@@ -1,9 +1,16 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9 
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 3-Comparación y Prueba
+; Descripción: se observaran los cambios en las diferentes banderas 
 INCLUDE Irvine32.inc
 
 .code
 main PROC
 
 ; CONDICION 1: ZERO FLAGS
+ ; se comparan valores iguales
    mov EBX, 1
    cmp EBX, 1
    call dumpRegs
@@ -16,7 +23,8 @@ main PROC
    cmp cl, cl
    call dumpRegs 
 
-   ; CONDICION 2: SING FLAG
+   ; CONDICION 2: SIGN FLAG
+     ; se compara un numero negativo con uno positivo
    mov EAX, 0
    mov EBX, 0
 
@@ -26,6 +34,7 @@ main PROC
    call dumpRegs 
 
    ; CONDICION 3: CARRY FLAGS 
+    ; Se suman los valores que superan la capacidad de AL
    mov EAX, 0
    mov EBX, 0
 
@@ -34,6 +43,7 @@ main PROC
    call dumpRegs 
 
    ; CONDICION 4: OVERFLOW FLAG 
+     ; se comparan valores con signo
    mov EAX, 0
    mov EBX, 0
 
@@ -43,6 +53,7 @@ main PROC
    call dumpRegs
 
    ;CASO 5: TEST
+     ; se comprueban los bits mediante un AND
    mov EAX, 0
    mov EAX, 5; 00000101b
    test EAX, 1
