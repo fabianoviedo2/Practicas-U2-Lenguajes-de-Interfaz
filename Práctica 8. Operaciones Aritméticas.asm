@@ -1,3 +1,10 @@
+; Materia: Lenguajes de Interfaz
+; Alumno: Fabian Alexis Camacho Oviedo
+; Horario: 8-9
+; Docente: Dr. José Luis Medina Jiménez
+; Práctica: 8-Operaciones Aritméticas
+; Descripción: operaciones de suma, resta, multiplicacion y division y uso de las banderas 
+
 INCLUDE Irvine32.inc
 
 .code
